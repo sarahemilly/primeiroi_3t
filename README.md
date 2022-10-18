@@ -1,7 +1,7 @@
 # Terceiro Trimestre
 
 ## Identificação
-Jesus de Maringá - Nr. 50
+Sarah - Nr. 39
 
 ## Conteúdo
 HTML, CSS, javaScript
