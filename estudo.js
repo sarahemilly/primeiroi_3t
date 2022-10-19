@@ -1,4 +1,4 @@
-/ alert("Oi! Eu sou o Alert");
+// alert("Oi! Eu sou o Alert");
 // document.write("Estou na página.");
 // console.log("Eu estou no console.");
 let tabuada = 5;
@@ -27,25 +27,16 @@ function escreva(){
         document.write("<br>");
     }
 }
-
-
 function total(){
     let val = document.getElementById("valor").value;
     let ju = document.getElementById("juros").value;
-
-    if(!Number(val)){
-        alert("O valor deve ser o número")
-        document.getElementById("valor").value = "";
-        document.getElementById("valor").focus();
-        return
+    
+    let t = document.getElementById("meses").value;
+    let resultado = 0;
+    for(let m = 1; m <= t; m++){
+        resultado = (val * ((ju/100)+1));
+        val = resultado;
+        document.write("Mês " + m + " valor de " + val + "<br>");
+        document.write("O total é de: " + resultado);
     }
-
-    if(!Number(ju)){
-        alert("O valor do juros deve ser o número")
-        document.getElementById("juros").value = "";
-        document.getElementById("juros").focus();
-        return
-    }
-    let resultado = (val * ((ju/100)+1));
-    document.write("O total é de: " + resultado);
 }
