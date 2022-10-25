@@ -3,7 +3,6 @@
 // console.log("Eu estou no console.");
 let tabuada = 5;
 function alo(){
-
     let tabuada = document.getElementById("entrada").value;
 
     document.write("<h1>Tabuada do " + tabuada + "</h1>");
@@ -17,15 +16,19 @@ function alo(){
     document.write(tabuada + " x 8 = " + (tabuada*8)+"<br>");
     document.write(tabuada + " x 9 = " + (tabuada*9)+"<br>");
     document.write(tabuada + " x 10 = " + (tabuada*10));
+       
 }
-// for(inicio, validaçao, manutençao)
 function escreva(){
-    for(var i=1; i <= 10; i++){
-        for(var j = 1; j <=10; j++){
-            document.write(i + " x " + j + " = " + (j*i)+"<br>");
-        }
-        document.write("<br>");
-    }
+  for(var i=1; i <= 10; i++){
+     for(var j = 1; j <=10; j++){
+document.write(i + " x " + j + " = " + (j*i)+"<br>");
+     }
+    document.write("<br>");
+ }
+
+}
+function moeda(atual){
+    return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 }
 function total(){
     let val = document.getElementById("valor").value;
@@ -36,7 +39,7 @@ function total(){
     for(let m = 1; m <= t; m++){
         resultado = (val * ((ju/100)+1));
         val = resultado;
-        document.write("Mês " + m + " valor de " + val + "<br>");
-        document.write("O total é de: " + resultado);
+        document.write("Mês " + m + " valor de " + moeda(val) + "<br>");
     }
+    document.write("O total é de: " + moeda(resultado));
 }
