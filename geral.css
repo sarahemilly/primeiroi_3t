@@ -1,1 +1,16 @@
+.calculadora {
+    background: blueviolet;
+    width: 200px;
+    padding: 10px;
+    color: whitesmoke;
+}
 
+#btnCalc{
+    background: chartreuse;
+    color: black;
+    padding: 7px;
+}
+#btnCalc:hover {
+    background: green;
+    color: whitesmoke;
+}
